@@ -1,0 +1,79 @@
+body {
+    background-color: #000;
+    color: #d3d3d3;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    flex-direction: column;
+    margin: 0;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.city {
+    font-size: 24px;
+    font-weight: 300;
+    margin: 0;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+}
+
+.time {
+    font-size: 150px;
+    font-weight: bold;
+    letter-spacing: -5px;
+    margin: 0;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.date {
+    font-size: 24px;
+    font-weight: 300;
+    margin: 0;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+    margin-top: 10px;
+}
+
+.weather-info {
+    font-size: 24px;
+    font-weight: 300;
+    margin-top: 10px;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+    
+.weather-info p {
+    margin: 0 10px;
+}
+
+#weather-icon {
+    width: 50px;
+    height: 50px;
+    vertical-align: middle;
+}
+
+.weather-minmax {
+    font-size: 18px;
+    font-weight: 300;
+    margin-top: 5px;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+}
+
+.logo-container {
+    margin-top: 5px;
+}
+    
+.logo {
+    max-width: 75px;
+    height: auto;
+    opacity: 0.8;
+}
