@@ -5,7 +5,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 100vh; /* Mantener 100vh para que ocupe todo el espacio del HTML5 widget */
+    width: 100vw; /* Mantener 100vw para que ocupe todo el ancho del HTML5 widget */
     text-align: center;
     flex-direction: column;
     margin: 0;
@@ -15,65 +16,77 @@ body {
 .container {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 8px; /* Reducido para hacer el contenedor más compacto verticalmente */
+    /* Añadido: Para asegurar que el contenido no desborde si es necesario */
+    max-width: 100%; 
+    max-height: 100%;
+    justify-content: center; /* Centrar verticalmente dentro del body si sobra espacio */
 }
 
 .city {
-    font-size: 24px;
+    font-size: 20px; /* Reducido de 24px */
     font-weight: 300;
     margin: 0;
-    text-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
-}
-
-.time {
-    font-size: 150px;
-    font-weight: bold;
-    letter-spacing: -5px;
-    margin: 0;
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
-}
-
-.date {
-    font-size: 24px;
-    font-weight: 300;
-    margin: 0;
-    text-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
-    margin-top: 10px;
-}
-
-.weather-info {
-    font-size: 24px;
-    font-weight: 300;
-    margin-top: 10px;
     text-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
     display: flex;
     align-items: center;
     justify-content: center;
-}
-    
-.weather-info p {
-    margin: 0 10px;
+    gap: 5px; /* Valor ajustado para que el logo esté cerca del texto */
+    margin-bottom: 5px; /* Espacio extra debajo de la línea de la ciudad */
 }
 
-#weather-icon {
-    width: 50px;
-    height: 50px;
+.inline-logo {
+    max-width: 5px; /* Reducido de 40px para un logo más pequeño */
+    height: auto;
+    opacity: 0.8;
     vertical-align: middle;
 }
 
-.weather-minmax {
-    font-size: 18px;
-    font-weight: 300;
-    margin-top: 5px;
-    text-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+.time {
+    font-size: 90px; /* Reducido de 150px a un tamaño más adecuado para el espacio */
+    font-weight: bold;
+    letter-spacing: -3px; /* Ajuste el espaciado entre letras si se ve muy apretado */
+    margin: 0;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    line-height: 1; /* Para reducir el espacio vertical extra en la línea de la hora */
 }
 
-.logo-container {
-    margin-top: 5px;
+.date {
+    font-size: 18px; /* Reducido de 24px */
+    font-weight: 300;
+    margin: 0;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+    margin-top: 5px; /* Ajustado de 10px */
+}
+
+.weather-info {
+    font-size: 20px; /* Reducido de 24px */
+    font-weight: 300;
+    margin-top: 5px; /* Ajustado de 5px */
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px; /* Mismo ajuste que antes */
 }
     
-.logo {
-    max-width: 75px;
-    height: auto;
-    opacity: 0.8;
+.weather-info p {
+    margin: 0;
+    padding: 0; /* Asegurar que no hay padding */
+}
+
+#weather-icon {
+    width: 35px; /* Reducido de 50px */
+    height: 35px; /* Reducido de 50px */
+    vertical-align: middle;
+    margin: 0;
+    padding: 0;
+    /* line-height: 0; */ /* Puedes probar esto si hay espacio extra */
+}
+
+.weather-minmax {
+    font-size: 16px; /* Reducido de 18px */
+    font-weight: 300;
+    margin-top: 3px; /* Ajustado de 2px */
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
 }
